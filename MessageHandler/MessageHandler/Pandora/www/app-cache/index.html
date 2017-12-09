@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+        <script type="text/javascript" src="plugin-md5.js"></script>
+        <script language="javascript">
+        
+        function encrypt() {
+            pluginMD5.encrypt('foo', function(encryptStr){
+                              document.getElementById("returnValue").value = encryptStr;
+                              });
+        }
+        
+            </script>
+    </head>
+    
+    <body>
+        
+        <h1>这是按钮调用</h1>
+        <input id = 'scanBtn' type="button" value="扫一扫" onclick="encrypt()"/>
+        
+        <h1>这是回调结果展示区</h1>
+        <textarea id ="returnValue" type="value" rows="3" cols="50">
+        </textarea>
+        
+    </body>
+</html>
+
